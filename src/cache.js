@@ -19,7 +19,7 @@ export default (key, promise) => {
 
   if (!p) {
     cache[key] = promise;
-    return p;
+    return promise;
   }
 
   return status(p).then(v => {
