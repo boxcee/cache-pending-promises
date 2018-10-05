@@ -1,0 +1,36 @@
+{
+  "name": "cache-pending-promises",
+  "version": "0.1.0",
+  "description": "cache pending promises",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require @babel/register tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boxcee/cache-pending-promises.git"
+  },
+  "keywords": [],
+  "author": "npm-install <noreply@marketlogicsoftware.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boxcee/cache-pending-promises/issues"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      {
+        "useBuiltIns": "usage"
+      }
+    ]
+  },
+  "homepage": "https://github.com/boxcee/cache-pending-promises#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "expect": "^23.6.0",
+    "mocha": "^5.2.0"
+  }
+}
