@@ -4,7 +4,8 @@
   "description": "cache pending promises",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --require @babel/register tests"
+    "test": "mocha --require @babel/register tests",
+    "babel": "babel src"
   },
   "repository": {
     "type": "git",
@@ -18,18 +19,21 @@
   },
   "babel": {
     "presets": [
-      "@babel/env",
-      {
-        "useBuiltIns": "usage"
-      }
+      "@babel/env"
+    ],
+    "plugins": [
+      "@babel/plugin-transform-runtime"
     ]
   },
   "homepage": "https://github.com/boxcee/cache-pending-promises#readme",
   "devDependencies": {
+    "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
+    "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/polyfill": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.1.2",
     "expect": "^23.6.0",
     "mocha": "^5.2.0"
   }
