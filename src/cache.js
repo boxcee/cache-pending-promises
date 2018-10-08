@@ -1,4 +1,4 @@
-const cache = {};
+const cache = new Map();
 
 /**
  * Returns the status of a promise.
@@ -15,10 +15,10 @@ const status = (promise) => {
 };
 
 export default (key, promise) => {
-  const p = cache[key];
+  const p = cache.get(key);
 
   if (!p) {
-    cache[key] = promise;
+    cache.set(key, promise);
     return promise;
   }
 
@@ -26,7 +26,7 @@ export default (key, promise) => {
     if (v === 1) {
       return p;
     }
-    cache[key] = promise;
+    cache.set(key, promise);
     return promise;
   });
 };
